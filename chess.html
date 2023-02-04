@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            chess board
+        </title>
+    </head>
+    <style>
+      body{
+        background-color: beige;
+      }
+      .board{
+        height: 820px;
+        width: 820px;
+        background-color: #dcdcbc;
+        border-radius: 10px;
+        border: 4px solid black;
+        box-shadow: 0px 0px 40px black;
+      }
+      .box{
+        display: flex;
+        flex-direction: row;
+      }
+      .white{
+        height: 100px;
+        width: 100px;
+        background-color: white;
+        margin-left: 10px;
+        margin-top: 10px;
+        cursor: pointer;
+      }
+      .black{
+        height: 100px;
+        width: 100px;
+        background-color: #595959;
+        margin-right: 10px;
+        margin-top: 10px;
+        cursor: pointer;
+      }
+      .whites{
+        height: 100px;
+        width: 100px;
+        background-color: white;
+        margin-top: 10px;
+        cursor: pointer;
+      }
+      .blacks{
+        height: 100px;
+        width: 100px;
+        background-color: #595959;
+        margin-top: 10px;
+        cursor: pointer;
+      }
+      .white1{
+        height: 100px;
+        width: 100px;
+        background-color: #595959;
+        margin-left: 10px;
+        cursor: pointer;
+      
+      }
+      .black1{
+        height: 100px;
+        width: 100px;
+        background-color: white;
+        margin-right: 10px;
+        cursor: pointer;
+        
+      }
+      .whites1{
+        height: 100px;
+        width: 100px;
+        background-color: #595959;
+        cursor: pointer;
+        
+      
+      }
+      .blacks1{
+        height: 100px;
+        width: 100px;
+        background-color: white;
+        cursor: pointer;
+        
+      }
+      .blackss{
+        height: 100px;
+        width: 100px;
+        background-color: #595959;
+        margin-right: 10px;
+        cursor: pointer;
+        
+        
+        
+      }
+      .whitess{
+        height: 100px;
+        width: 100px;
+        background-color: white;
+        margin-left: 10px;
+        cursor: pointer;
+       
+        
+      }
+      .blacksss{
+        height: 100px;
+        width: 100px;
+        background-color: #595959;
+        cursor: pointer;
+        
+        
+      }
+      .whitesss{
+        height: 100px;
+        width: 100px;
+        background-color: white;
+        cursor: pointer;
+        
+        
+      }
+      .whit{
+        height: 100px;
+        width: 100px;
+        background-color: #595959;
+        margin-left: 10px;
+        margin-bottom: 10px;
+        cursor: pointer;
+      }
+      .blac{
+        height: 100px;
+        width: 100px;
+        background-color: white;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        cursor: pointer;
+      }
+      .whi{
+        height: 100px;
+        width: 100px;
+        background-color: #595959;
+        margin-bottom: 10px;
+        cursor: pointer;
+      }
+      .bla{
+        cursor: pointer;
+        height: 100px;
+        width: 100px;
+        background-color: white;
+        margin-bottom: 10px
+        
+      }
+      .white:hover{
+        box-shadow: 0 0 10px whitesmoke;
+        transition: 0.5s;
+        border-radius: 10px;
+      }
+      .black:hover{
+        box-shadow: 0 0 10px grey;
+        transition: 0.5s;
+        border-radius: 10px;
+      }
+      .whites:hover{
+        box-shadow: 0 0 10px whitesmoke;
+        transition: 0.5s;
+        border-radius: 10px;
+      }
+      .blacks:hover{
+        box-shadow: 0 0 10px grey;
+        transition: 0.5s;
+        border-radius: 10px;
+      }
+      .white1:hover{
+        box-shadow: 0 0 10px yellow;
+        transition: 0.5s;
+        border-radius: 10px;
+      }
+      .black1:hover{
+        box-shadow: 0 0 10px yellow;
+        transition: 0.5s;
+        border-radius: 10px;
+      }
+      .whites1:hover{
+        box-shadow: 0 0 10px yellow;
+        transition: 0.5s;
+        border-radius: 10px;
+      }
+      .blacks1:hover{
+        box-shadow: 0 0 10px yellow;
+        transition: 0.5s;
+        border-radius: 10px;
+      }
+      .whit:hover{
+        box-shadow: 0 0 10px whitesmoke;
+        transition: 0.5s;
+        border-radius: 10px;
+      }
+      .blac:hover{
+        box-shadow: 0 0 10px grey;
+        transition: 0.5s;
+        border-radius: 10px;
+      }
+      .whi:hover{
+        box-shadow: 0 0 10px whitesmoke;
+        transition: 0.5s;
+        border-radius: 10px;
+      }
+      .bla:hover{
+        box-shadow: 0 0 10px grey;
+        transition: 0.5s;
+        border-radius: 10px;
+      }
+      .whitess:hover{
+        box-shadow: 0 0 10px yellow;
+        transition: 0.5s;
+        border-radius: 10px;
+      }
+      .blackss:hover{
+        box-shadow: 0 0 10px yellow;
+        transition: 0.5s;
+        border-radius: 10px;
+      }
+      .whitesss:hover{
+        box-shadow: 0 0 10px yellow;
+        transition: 0.5s;
+        border-radius: 10px;
+      }
+      .blacksss:hover{
+        box-shadow: 0 0 10px yellow;
+        transition: 0.5s;
+        border-radius: 10px;
+      }
+      
+      
+      
+    </style>
+    <body>
+        <div class="board">
+            <div class="box box1">
+                <button class="white"><img style="height: 80px; width: 80px;"src="rook.png "/></button>
+                <button class="blacks"><img style="height: 80px; width: 80px;"src="knight (1).png "/></button>
+                <button class="whites"><img style="height: 90px; width: 90px;"src="bishop.png "/></button>
+                <button class="blacks"><img style="height: 90px; width: 90px;" src="king.png"/></button>
+                <button class="whites"><img style="height: 80px; width: 80px;"src="queen.png"/></button>
+                <button class="blacks"><img style="height: 90px; width: 90px;"src="bishop.png "/></button>
+                <button class="whites"><img style="height: 80px; width: 80px;"src="knight (1).png"/></button>
+                <button class="black"><img style="height: 80px; width: 80px;"src="rook.png "/></button>
+            </div>
+            <div class="box">
+                <button class="white1"><img src="pawn (1).png" />  </button>
+                <button class="blacks1"><img src="pawn (1).png" /> </button>
+                <button class="whites1"><img src="pawn (1).png" /> </button>
+                <button class="blacks1"><img src="pawn (1).png" /> </button>
+                <button class="whites1"><img src="pawn (1).png" /> </button>
+                <button class="blacks1"><img src="pawn (1).png" /> </button>
+                <button class="whites1"><img src="pawn (1).png" /> </button>
+                <button class="black1"><img src="pawn (1).png" /> </button>
+            </div>
+            <div class="box">
+                <button class="whitess"></button>
+                <button class="blacksss"></button>
+                <button class="whitesss"></button>
+                <button class="blacksss"></button>
+                <button class="whitesss"></button>
+                <button class="blacksss"></button>
+                <button class="whitesss"></button>
+                <button class="blackss"></button>
+            </div>
+            <div class="box">
+                <button class="white1"></button>
+                <button class="blacks1"></button>
+                <button class="whites1"></button>
+                <button class="blacks1"></button>
+                <button class="whites1"></button>
+                <button class="blacks1"></button>
+                <button class="whites1"></button>
+                <button class="black1"></button>
+            </div>
+            <div class="box">
+                <button class="whitess"></button>
+                <button class="blacksss"></button>
+                <button class="whitesss"></button>
+                <button class="blacksss"></button>
+                <button class="whitesss"></button>
+                <button class="blacksss"></button>
+                <button class="whitesss"></button>
+                <button class="blackss"></button>
+            </div>
+            <div class="box">
+                <button class="white1"></button>
+                <button class="blacks1"></button>
+                <button class="whites1"></button>
+                <button class="blacks1"></button>
+                <button class="whites1"></button>
+                <button class="blacks1"></button>
+                <button class="whites1"></button>
+                <button class="black1"></button>
+            </div>
+            <div class="box">
+                <button class="whitess"><img src="pawn-black-silhouette.png"/></button>
+                <button class="blacksss"><img src="pawn-black-silhouette.png"/></button>
+                <button class="whitesss"><img src="pawn-black-silhouette.png"/></button>
+                <button class="blacksss"><img src="pawn-black-silhouette.png"/></button>
+                <button class="whitesss"><img src="pawn-black-silhouette.png"/></button>
+                <button class="blacksss"><img src="pawn-black-silhouette.png"/></button>
+                <button class="whitesss"><img src="pawn-black-silhouette.png"/></button>
+                <button class="blackss"><img src="pawn-black-silhouette.png"/></button>
+            </div>
+            <div class="box ">
+                <button class="whit"><img style="height: 76px; width: 76px;" src="rook2.png"/></button>
+                <button class="bla"><img style="height: 80px; width: 80px;" src="knight.png"/></button>
+                <button class="whi"><img style="height: 90px; width: 90px;" src="bishop (1).png"/></button>
+                <button class="bla"><img style="height: 90px; width: 90px;" src="queen (1).png"/></button>
+                <button class="whi"><img style="height: 90px; width: 100px;" src="chess-piece.png"/></button>
+                <button class="bla"><img style="height: 90px; width: 90px;" src="bishop (1).png"/></button>
+                <button class="whi"><img style="height: 80px; width: 80px;" src="knight.png"/></button>
+                <button class="blac"><img style="height: 76px; width: 76px;" src="rook2.png"/></button>
+            </div>
+        </div>
+
+    </body>
+</html>
